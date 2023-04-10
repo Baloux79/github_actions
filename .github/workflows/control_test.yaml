@@ -10,7 +10,7 @@ qa:
 
         - name: Set up Python
           uses: actions/setup-python@master
-          with
+          with:
             python-version: "3.x"
 
         - name: Install pytest and flake8

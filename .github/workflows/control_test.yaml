@@ -6,21 +6,21 @@ qa:
     runs-on: ubuntu-20.04
     steps:
         - name: checkout on master
-        uses: actions/checkout@v3
+          uses: actions/checkout@v3
 
         - name: Set up Python
-        uses: actions/setup-python@master
-        with
+          uses: actions/setup-python@master
+          with
             python-version: "3.x"
 
         - name: Install pytest and flake8
-        run: |
+          run: |
             pip install pytest
             pip install flake8
 
         - name: Run tests
-        run: |
+          run: |
             pytest
 
         - name: Run flake8
-        uses: py-actions/flake8@v2
+          uses: py-actions/flake8@v2
